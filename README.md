@@ -1,11 +1,10 @@
-# Braze Web SDK Integration 
-This repository provides a basic website layout and structure to simply integrate or create a connection with Braze and to start logging attributes, events and purchases. 
+# Braze <> mParticle Side by side integration
+All you need is an mParticle Web App API key to plug into this project and then you will be able to log basic attribute and event updates to users.
 
 ## Requirements
 ```
 Node.js 8+
-Braze App Identifier Key
-Braze SDK Endpoint
+mParticle Web App API KEY
 ```
 
 ## Installation
@@ -13,7 +12,7 @@ Braze SDK Endpoint
 1. Clone this repo:
 
 ```
-git clone https://github.com/jpalzen/braze-web-integration.git
+git clone https://github.com/jpalzen/mParticle-braze-web-integration.git
 ```
 
 2. Navigate to the root directory and install package dependencies:
@@ -27,8 +26,7 @@ npm install
 1. Create a `./.env` file and add the following environment variables:
 
 ```
-REACT_APP_BRAZE_API_KEY = "your_API_key_here"
-REACT_APP_BRAZE_ENDPOINT = "the_endpoint_here"
+REACT_APP_MPARTICLE_API_KEY="your_mparticle_key_here"
 ```
 
 2. Run the app in development mode:
