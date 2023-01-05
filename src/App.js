@@ -62,12 +62,6 @@ class App extends React.Component {
     braze.register(mParticleConfig);
     mParticle.init(process.env.REACT_APP_MPARTICLE_API_KEY, mParticleConfig);
 
-    /*braze.initialize(process.env.REACT_APP_BRAZE_API_KEY, {
-      baseUrl: process.env.REACT_APP_BRAZE_ENDPOINT,
-    });
-    
-    braze.automaticallyShowInAppMessages();
-    braze.openSession();*/
   };
 
   render() {
@@ -102,8 +96,8 @@ class App extends React.Component {
           {this.state.showUserA ? <UserAttributes display={this.state.showUserA} /> : ""}
           {this.state.showCustomA ? <CustomAttributes display={this.state.showUserA} /> : ""}
           {this.state.showCustomE ? <CustomEvents display={this.state.showUserA} /> : ""}
-          {this.state.showPurchases ? <Purchases display={this.state.showUserA} /> : ""}
-
+          {/*this.state.showPurchases ? <Purchases display={this.state.showUserA} /> : ""*/}
+  
 
         </div>
 
