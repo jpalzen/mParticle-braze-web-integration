@@ -28,11 +28,7 @@ class UserAttributes extends React.Component {
         
     }
     componentDidMount(){
-        /*braze.getUser().getUserId(userId => {
-            //console.log("The user is: " + userId);
-            if (this.userId !== userId)
-            this.setState({userId:userId});
-        })*/
+    
         const userId = mParticle.Identity.getCurrentUser().getUserIdentities().userIdentities.customerid;
         if (this.userId !== userId)
         this.setState({userId:userId});

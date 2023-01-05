@@ -6,7 +6,7 @@ export function logMethod(name, value) {
         case 'change_user_button':
             changeUser(value);
             break;
-        /*case 'fn_button':
+        case 'fn_button':
             logFirstName(value);
             break;
         case 'ln_button':
@@ -29,7 +29,7 @@ export function logMethod(name, value) {
             break;
         case 'phone_number_button':
             logPhoneNumber(value);
-            break;*/
+            break;
         default:
             break;
     }
@@ -67,33 +67,45 @@ function changeUser(value) {
     };
     mParticle.Identity.login(identityRequest);
 }
-/*
+
 function logFirstName(value) {
-    braze.getUser().setFirstName(value);
+    //braze.getUser().setFirstName(value);
+    mParticle.Identity.getCurrentUser().setUserAttribute("$FirstName",value);
+
 
 }
 
 function logLastName(value) {
-    braze.getUser().setLastName(value);
+    //braze.getUser().setLastName(value);
+    mParticle.Identity.getCurrentUser().setUserAttribute("$LastName",value);
 }
 
 function logEmail(value) {
-    braze.getUser().setEmail(value);
+    //braze.getUser().setEmail(value);
+    var identityRequest = {
+        userIdentities: { email: value }
+  }
+  mParticle.Identity.modify(identityRequest);
 }
 function logGender(value) {
-    braze.getUser().setGender(value);
+    //braze.getUser().setGender(value);
+    mParticle.Identity.getCurrentUser().setUserAttribute("$Gender",value);
 }
 function logCountry(value) {
-    braze.getUser().setCountry(value);
+    //braze.getUser().setCountry(value);
+    mParticle.Identity.getCurrentUser().setUserAttribute("$Country",value);
 }
 function logBirthday(value) {
-    braze.getUser().setDateOfBirth(value.substring(8), value.substring(5, 7), value.substring(0, 4));
+    //braze.getUser().setDateOfBirth(value.substring(8), value.substring(5, 7), value.substring(0, 4));
+    const age = new Date().getFullYear().toString() - value.substring(0,4);
+    mParticle.Identity.getCurrentUser().setUserAttribute("$Age",age);
 }
 function logHomeCity(value) {
-    braze.getUser().setHomeCity(value);
+    //braze.getUser().setHomeCity(value);
+    mParticle.Identity.getCurrentUser().setUserAttribute("$City",value);
 }
 function logPhoneNumber(value) {
-    braze.getUser().setPhoneNumber(value);
-
+    //braze.getUser().setPhoneNumber(value);
+    mParticle.Identity.getCurrentUser().setUserAttribute("$Mobile",value);
 }
-*/
+
