@@ -81,7 +81,7 @@ class App extends React.Component {
         {/*<a href="https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html" target="_blank" rel="noopener noreferrer">Link to Web SDK Documentation (Main ClassName Methods)</a>
         <a href="https://js.appboycdn.com/web-sdk/latest/doc/ab.User.html" target="_blank" rel="noopener noreferrer">Link to Web SDK Documentation (getUser() SubclassName Methods)</a>
     */}
-        <a href="https://sweeney.braze.com/dashboard/app_usage/61d45c609c8bb41ce2323f91?locale=en" rel="noopener noreferrer" target="_blank">Link to Braze Dashboard</a>
+        <a href="https://internal-dashboard-03.braze.com/dashboard/app_usage/63b561180545356f805f886f?locale=en" rel="noopener noreferrer" target="_blank">Link to Braze Dashboard</a>
 
 
 
